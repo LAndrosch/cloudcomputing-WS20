@@ -9,7 +9,7 @@ There is an existing Application, which consists out of three parts
 
 - Database
 
-The original intention was a progressive web application that has a simple architecture and is implemented in Angular (original project by Simon S. and Florian M.).
+The original intention was a progressive web application that has a simple architecture and is implemented in Angular (original project by Setre14 and thedarthmader).
 
 	The server and the database represent the backend, where the server retrieves and stores information on the database. 
 
