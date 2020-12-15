@@ -29,5 +29,14 @@ The steps that should be taken are therefore:
 
 - Implement a Continues Integration using GitHub Actions
 
-	- On a new release GitHub Actions should take care of pushing the new docker images to DockerHub
-	- Additionally an existing shared codebase between server and client should be automatically published on NPM
+	- ~~On a new release GitHub Actions should take care of pushing the new docker images to DockerHub~~
+	- ~~Additionally an existing shared codebase between server and client should be automatically published on NPM~~
+		
+	- In a **GitFlow approach** on every new release, the CI should automatically push the newly built docker images to DockerHub
+	- The shared codebase between server and client should be **automatically published to NPM** 
+	- To verify the quality of the codebase, some steps should be taken on every push/merge to master <br>
+	**Snyk** should be used to automatically check the npm module against security flaws on every push/merge to the master
+	
+- Providing a theoretical POC for publishing the newly created docker images on a kubernetes cluster
+
+	We are not yet sure, if we really want to run the application in the cloud, however we want to provide the necessary infrastructure/workflows
