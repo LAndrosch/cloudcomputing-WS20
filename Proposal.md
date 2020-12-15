@@ -37,6 +37,6 @@ The steps that should be taken are therefore:
 	- To verify the quality of the codebase, some steps should be taken on every push/merge to master <br>
 	**Snyk** should be used to automatically check the npm module against security flaws on every push/merge to the master
 	
-- Providing a theoretical POC for publishing the newly created docker images on a kubernetes cluster
+- Providing a POC for publishing the newly created docker images on a kubernetes cluster
 
-	We are not yet sure, if we really want to run the application in the cloud, however we want to provide the necessary infrastructure/workflows
+	We are not yet sure, if we really want to run the application in the cloud, however we want to provide the necessary infrastructure/workflows and implement it locally using minikube/kind
