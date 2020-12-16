@@ -1,0 +1,32 @@
+version: '3'
+services:
+  client:
+    # build:
+    #     context: .
+    #     dockerfile: client/Dockerfile
+    image: ordermanager/client
+    depends_on:
+      - server
+    ports:
+      - '8080:8080'
+  server:
+    image: ordermanager/server
+    environment:
+      - OM_MONGODB_URL=mongodb:27017/
+      - OM_MONGODB_NAME=order-manager-aws-v2
+      - OM_MONGODB_USER=om
+      - OM_MONGODB_PASSWORD=order-manager
+      - OM_SERVER_PORT=3001
+    depends_on:
+      - mongodb
+    ports:
+      - '3001:3001'
+  mongodb:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=om
+      - MONGO_INITDB_ROOT_PASSWORD=order-manager
+    # volumes:
+    #   - /srv/mongodb/data:/data/db
+    ports:
+      - '27017:27017'
