@@ -3,8 +3,8 @@
 ## Team
 |Name            |    Focusing on         |
 |:--------------:|:----------------------:|
-| Simon Schuster |        CI/CD           |
-| Lukas Androsch |     Kubernetes/CD	  |
+| Simon Schuster |        Kubernetes/CD   |
+| Lukas Androsch |     CI/CD      	  |
 
 Even though the focus of everyone is defined, the project is a group project and we will use strategies as pair programming making it hard to draw a strict line on who is working on what.
 
