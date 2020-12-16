@@ -65,3 +65,5 @@ The final presentation of the project should contain usecases that demonstrate t
 - https://github.com/Setre14/om-client
 - https://github.com/Setre14/om-server
 - https://github.com/Setre14/om-shared
+
+- https://hub.docker.com/_/mongo (docker image for the MongoDB)
