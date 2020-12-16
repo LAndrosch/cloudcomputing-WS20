@@ -9,12 +9,10 @@
 minikube start
 
 kubectl apply -f .\client.yml
-kubectl apply -f .\client-service.yml
 kubectl apply -f .\server.yml
-kubectl apply -f .\server-service.yml
+kubectl apply -f .\mongo-pv.yml
 kubectl apply -f .\mongo.yml
-kubectl apply -f .\mongo-service.yml
 
-kubectl port-forward service/server-service 8080:8080
-kubectl port-forward service/client-service 3001:3001
+kubectl port-forward service/server 3001:3001
+kubectl port-forward service/client 8080:8080
 ```

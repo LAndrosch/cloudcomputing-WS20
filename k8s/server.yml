@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  name: server-deployment
+  name: server
 spec:
   selector:
     matchLabels:
@@ -17,7 +17,7 @@ spec:
         image: ordermanager/server
         env:
         - name: OM_MONGODB_URL
-          value: "mongo-service:27017/"
+          value: "mongo:27017/"
         - name: OM_MONGODB_NAME
           value: "order-manager-k8s"
         - name: OM_MONGODB_USER
@@ -28,3 +28,16 @@ spec:
           value: "3001"
         ports:
         - containerPort: 3001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: server
+spec:
+  selector:
+    app: server
+  ports:
+    - protocol: TCP
+      port: 3001
+      targetPort: 3001
+  type: LoadBalancer
