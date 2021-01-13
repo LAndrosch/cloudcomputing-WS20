@@ -21,9 +21,15 @@ spec:
         - name: OM_MONGODB_NAME
           value: "order-manager-k8s"
         - name: OM_MONGODB_USER
-          value: "om"
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: username
         - name: OM_MONGODB_PASSWORD
-          value: "order-manager"
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: password
         - name: OM_SERVER_PORT
           value: "3001"
         ports:
