@@ -131,3 +131,11 @@ kubectl port-forward service/client 8080:8080
 ```
 
 The UI can then be reached from `localhost:8080`.
+
+If a horizontal auto scaler should be used there is an example in `k8s/autoscaler.yml` for the server
+
+```bash
+kubectl apply -f autoscaler.yml
+```
+
+This sets the minimum pods to 3 and max to 10 depending on the CPU utilization.
