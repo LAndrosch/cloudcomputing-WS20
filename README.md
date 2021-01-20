@@ -60,7 +60,6 @@ The branches `master` and `develop` are also protected by the branch protection 
 - Require pull request reviews before merging
     - Require review from Code Owners
 - Require status checks to pass before merging
-    - Require branches to be up to date before merging
     - Status checks 
         - Tests
         - Snyk checks
